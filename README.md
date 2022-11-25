@@ -55,4 +55,4 @@ import { Inter } from '@next/font/google'
 ## Author
 
 - Github - [fiqihalfito](https://www.github.com/fiqihalfito)
-- LinkedIn - [fiqih-alfito](https://www.linkedin.com/in/fiqih-alfito)\
+- LinkedIn - [fiqih-alfito](https://www.linkedin.com/in/fiqih-alfito)
