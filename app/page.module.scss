@@ -1,0 +1,123 @@
+/* Primary */
+$very-dark-blue: hsl(233, 47%, 7%); //main background
+$dark-desaturated-blue: hsl(244, 38%, 16%); //card background
+$soft-violet: hsl(277, 64%, 61%); //accent
+
+// Neutral
+$white: hsl(0, 0%, 100%); //main heading, stats
+$slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75); //main paragraph
+$slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6); //stat headings
+
+$font-size: 15px;
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $very-dark-blue;
+}
+
+.card {
+    width: 1080px;
+    // height: 446px;
+    background-color: $dark-desaturated-blue;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.cardImage {
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $soft-violet;
+        opacity: .5;
+    }
+}
+
+.imageMobile {
+    display: none;
+}
+
+
+.description {
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+        margin-bottom: 2rem;
+
+        span {
+            color: $soft-violet;
+        }
+
+    }
+
+    p {
+        color: $slightly-transparent-white-main;
+        font-size: $font-size;
+        line-height: 1.75rem;
+    }
+}
+
+.stats {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        color: $slightly-transparent-white-stat;
+        font-size: .85rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        padding: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .imageMobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .imageDesktop {
+        display: none;
+    }
+
+    .description {
+        text-align: center;
+        padding: 1rem;
+
+        p {
+            padding-inline: 1.5rem;
+        }
+    }
+
+    .stats {
+        margin: 2rem 0;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
